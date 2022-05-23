@@ -169,6 +169,7 @@ implements Serializable, SplSubject
 
     /**
      */
+    #[ReturnTypeWillChange]
     public function attach(SplObserver $observer)
     {
         $this->detach($observer);
@@ -177,6 +178,7 @@ implements Serializable, SplSubject
 
     /**
      */
+    #[ReturnTypeWillChange]
     public function detach(SplObserver $observer)
     {
         if (($key = array_search($observer, $this->_observers, true)) !== false) {
